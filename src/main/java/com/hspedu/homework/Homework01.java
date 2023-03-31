@@ -8,7 +8,8 @@ public class Homework01 {
 	public static void main(String[] args) {
 
 	}
-@Test
+
+	@Test
 	public void testList() {
 		DAO<User> dao = new DAO<>();
 		dao.save("001", new User(1, 10, "jack"));
@@ -17,16 +18,14 @@ public class Homework01 {
 
 		List<User> list = dao.list();
 		System.out.println("list=" + list);
-		
+
 		dao.update("003", new User(3, 58, "milan"));
 		list = dao.list();
 		System.out.println("list=" + list);
 		dao.delate("001");
 		list = dao.list();
 		System.out.println("list=" + list);
-		System.out.println("id=003"+dao.get("003"));
-		
-		
+		System.out.println("id=003" + dao.get("003"));
 
 	}
 
